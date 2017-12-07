@@ -103,6 +103,18 @@ func (response *Response) Message() string {
 	switch (*response).Code {
 	case 200:
 		return "OK"
+	case 204:
+		return "No Content"
+	case 310:
+		return "Communicate"
+	case 311:
+		return "Not Enough"
+	case 312:
+		return "Advice"
+	case 400:
+		return "Bad Request"
+	case 500:
+		return "Internal Server Error"
 	default:
 		return ""
 	}
